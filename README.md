@@ -1,1 +1,1 @@
-# The missing schema for the ClickHouse server
+# The missing schema for ClickHouse server
