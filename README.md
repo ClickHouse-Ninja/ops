@@ -1,1 +1,1 @@
-# ops
+# The missing schema for the ClickHouse server
