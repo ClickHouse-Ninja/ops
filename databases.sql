@@ -26,12 +26,12 @@ FROM (
         database
         WITH TOTALS
     ORDER BY order_size DESC
-)
-ANY INNER JOIN (
+) AS P
+INNER JOIN (
     SELECT
         name AS database
         , data_path
         , metadata_path
         , engine
     FROM system.databases
-) USING (database);
+) AS D USING (database);
