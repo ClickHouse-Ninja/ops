@@ -30,11 +30,11 @@ FROM (
         database, table
         WITH TOTALS
     ORDER BY order_size DESC
-)
-ANY INNER JOIN (
+) AS P
+INNER JOIN (
     SELECT
         database
         , name AS table
         , engine
     FROM system.tables
-) USING (database, table);
+) AS T USING (database, table);
